@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walimatulurus Kita</title>
+    <title>Walimatulurus - Kad Jemputan Digital Gempak</title>
     <!-- Google Fonts untuk Tulisan Estetik -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -15,101 +15,204 @@
         }
         body {
             font-family: 'Montserrat', sans-serif;
-            background: #f7f3ef; /* Warna latar pastel/cream */
+            background: #f4ebe1; /* Warna latar pastel mewah */
+            background-image: radial-gradient(#fff5ea 1px, transparent 1px);
+            background-size: 20px 20px;
             color: #4a4a4a;
             text-align: center;
+            overflow-x: hidden;
         }
+        
+        /* Animasi Muncul Lembut */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .container {
-            max-width: 500px;
-            margin: 0 auto;
+            max-width: 450px;
+            margin: 30px auto;
             background: #ffffff;
-            min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            padding: 40px 20px;
-            border-left: 5px solid #d4af37; /* Garis emas tepi */
-            border-right: 5px solid #d4af37;
+            min-height: 90vh;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 50px 25px;
+            border-radius: 20px;
+            border: 2px solid #e2c974;
+            position: relative;
+            animation: fadeInUp 1.5s ease-out;
         }
+        
+        /* Bingkai hiasan penjuru */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 15px; bottom: 15px; left: 15px; right: 15px;
+            border: 1px solid #e2c974;
+            border-radius: 15px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             color: #b59410;
-            margin: 20px 0;
+            margin: 25px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
         h2 {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            color: #7a7a7a;
-            margin-bottom: 10px;
+            color: #8a8a8a;
+            margin-bottom: 5px;
+        }
+        .bismillah {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2.2rem;
+            color: #b59410;
+            margin-bottom: 15px;
         }
         .divider {
-            width: 60px;
-            height: 2px;
-            background: #d4af37;
-            margin: 20px auto;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 25px auto;
         }
         .info-section {
-            margin: 30px 0;
-            padding: 20px;
-            background: #faf8f5;
-            border-radius: 10px;
+            margin: 25px 0;
+            padding: 25px 15px;
+            background: #fffbf7;
+            border-radius: 15px;
+            border: 1px solid #f2e6d8;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
         }
+        .info-section h3 {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: #b59410;
+            margin-bottom: 8px;
+        }
+        .info-section p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Kaunter Masa Gempak */
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin: 25px 0;
+            gap: 12px;
+            margin: 30px 0;
         }
         .time-box {
-            background: #b59410;
+            background: linear-gradient(135deg, #d4af37, #b59410);
             color: white;
-            padding: 10px;
-            border-radius: 8px;
-            min-width: 65px;
+            padding: 12px 8px;
+            border-radius: 12px;
+            min-width: 70px;
+            box-shadow: 0 4px 10px rgba(181, 148, 16, 0.3);
         }
         .time-box span {
             display: block;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
         .time-box label {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
         }
+
+        /* Rekaan Butang Gempak */
         .btn {
-            display: inline-block;
-            width: 80%;
-            padding: 12px;
-            margin: 10px 0;
-            background: #25d366; /* Warna WhatsApp */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            padding: 14px;
+            margin: 8px 0;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: 600;
-            transition: 0.3s;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border: none;
             cursor: pointer;
         }
-        .btn-maps {
-            background: #4285F4; /* Warna Google Maps */
-        }
+        .btn-whatsapp { background: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .btn-maps { background: #4285F4; box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3); }
+        
         .btn:hover {
-            transform: scale(1.03);
-            opacity: 0.9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            opacity: 0.95;
+        }
+
+        /* Butang Muzik Terapung (Floating Music Button) */
+        .music-control {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: white;
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .music-control svg {
+            width: 24px;
+            height: 24px;
+            fill: #b59410;
         }
     </style>
 </head>
 <body>
 
+<!-- Elemen Audio & Butang Kawalan -->
+<audio id="weddingMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<div class="music-control" onclick="toggleMusic()" id="musicBtn" title="Main/Pause Muzik">
+    <svg id="musicIcon" viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+</div>
+
 <div class="container">
+    <div class="bismillah">In the name of Allah</div>
     <h2>Walimatulurus</h2>
+    
     <!-- Ganti dengan nama anda & pasangan -->
     <h1>Nama Lelaki & Nama Perempuan</h1>
     <div class="divider"></div>
     
-    <p>Assalamualaikum W.B.T. & Salam Sejahtera</p>
-    <p style="margin-top: 10px; font-size: 0.9rem; font-style: italic;">
-        Dengan penuh kesyukuran, kami menjemput Dato' / Datin / Tuan / Puan / Encik / Cik ke majlis perkahwinan kami.
+    <p style="font-weight: 600; letter-spacing: 1px;">Assalamualaikum W.B.T.</p>
+    <p style="margin-top: 12px; font-size: 0.9rem; font-style: italic; line-height: 1.6; padding: 0 10px;">
+        Dengan penuh kesyukuran ke hadrat Ilahi, kami dengan segala hormatnya menjemput Dato' / Datin / Tuan / Puan / Encik / Cik hadir ke majlis perkahwinan kami.
     </p>
 
     <!-- Kaunter Masa Detik (Countdown) -->
@@ -123,31 +226,36 @@
     <!-- Butiran Majlis -->
     <div class="info-section">
         <h3>TARIKH</h3>
-        <p>Sabtu, 24 Oktober 2026</p>
+        <p style="font-weight: 600;">Sabtu, 24 Oktober 2026</p>
         
-        <h3 style="margin-top: 15px;">MASA</h3>
+        <div class="divider" style="width: 40px; margin: 15px auto;"></div>
+        
+        <h3>MASA</h3>
         <p>11:30 Pagi – 4:00 Petang</p>
         
-        <h3 style="margin-top: 15px;">TEMPAT</h3>
-        <p>Dewan Perdana, Kuala Lumpur</p>
+        <div class="divider" style="width: 40px; margin: 15px auto;"></div>
+        
+        <h3>TEMPAT</h3>
+        <p style="font-weight: 600;">Dewan Perdana, Kuala Lumpur</p>
     </div>
 
     <!-- Atur Cara Majlis -->
     <div class="info-section">
-        <h3>ATUR CARA</h3>
-        <p>11:30 am : Ketibaan Tetamu</p>
-        <p>1:00 pm : Ketibaan Pengantin & Makan Beradab</p>
-        <p>4:00 pm : Majlis Bersurai</p>
+        <h3 style="margin-bottom: 12px;">ATUR CARA MAJLIS</h3>
+        <p style="margin-bottom: 6px;"><strong>11:30 am</strong> : Ketibaan Tetamu Jemputan</p>
+        <p style="margin-bottom: 6px;"><strong>1:00 pm</strong> : Ketibaan Pengantin & Makan Beradab</p>
+        <p><strong>4:00 pm</strong> : Majlis Bersurai</p>
     </div>
 
-    <!-- Butang Interaktif Peta & RSVP -->
-    <!-- Ganti pautan '#' dengan link Google Maps & nombor WhatsApp sebenar -->
-    <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Lokasi (Google Maps)</a>
-    <a href="https://wa.me/60123456789?text=Saya%20mengesahkan%20kehadiran%20ke%20majlis%20anda" target="_blank" class="btn">💬 RSVP Melalui WhatsApp</a>
+    <!-- Butang Tindakan Interaktif -->
+    <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 NAVIGASI LOKASI (GOOGLE MAPS)</a>
+    <a href="https://wa.me/60123456789?text=Saya%20mengesahkan%20kehadiran%20ke%20majlis%20anda." target="_blank" class="btn btn-whatsapp">💬 CONFIRM KEHADIRAN (RSVP)</a>
+    
+    <p style="margin-top: 30px; font-size: 0.8rem; color: #8a8a8a;">Terima kasih atas doa & kehadiran anda.</p>
 </div>
 
 <script>
-    // Set tarikh perkahwinan di sini (Format: Bulan Hari, Tahun Jam:Minit:Saat)
+    // Set tarikh perkahwinan (Format: Bulan Hari, Tahun Jam:Minit:Saat)
     const weddingDate = new Date("Oct 24, 2026 11:30:00").getTime();
 
     const timer = setInterval(function() {
@@ -159,16 +267,29 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
+        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
         if (distance < 0) {
             clearInterval(timer);
-            document.querySelector(".countdown-container").innerHTML = "<h3>Majlis Sedang Berlangsung!</h3>";
+            document.querySelector(".countdown-container").innerHTML = "<h3 style='color:#b59410;'>Majlis Sedang Berlangsung!</h3>";
         }
     }, 1000);
+
+    // Fungsi Mengawal Muzik Latar
+    const audio = document.getElementById("weddingMusic");
+    
+    function toggleMusic() {
+        if (audio.paused) {
+            audio.play();
+            document.getElementById("musicIcon").style.fill = "#25d366"; // Ikon bertukar hijau jika muzik aktif
+        } else {
+            audio.pause();
+            document.getElementById("musicIcon").style.fill = "#b59410";
+        }
+    }
 </script>
 
 </body>
